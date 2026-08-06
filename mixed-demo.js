@@ -13,7 +13,7 @@ async function migrate(){
    prompt:"Say hi"
  });
 
- await stripe.charges.create({
+ await stripe.paymentIntents.create({
    amount:1000,
    currency:"usd",
    source:"tok_mastercard"
