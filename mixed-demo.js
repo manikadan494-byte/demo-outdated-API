@@ -1,9 +1,9 @@
-const { Configuration, OpenAIApi } = require("openai");
+const OpenAI = require('openai');
 const Stripe = require("stripe");
 
-const openai = new OpenAIApi(new Configuration({
+const openai = new OpenAI({
  apiKey:process.env.OPENAI_API_KEY
-}));
+});
 
 const stripe=Stripe(process.env.STRIPE_SECRET);
 
